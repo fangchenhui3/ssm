@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.imyzone.main.dao.UserDao">
+    <select id="confirmLog" parameterType="UserEntity" resultType="integer">
+        SELECT count(userid) FROM imyzone_user WHERE email=#{email} AND password=#{password}
+    </select>
+
+<!--
+
+    <select id="getUser" parameterType="integer" resultType="UserEntity">
+        SELECT email,password FROM imyzone_user WHERE userid=#{userid}
+    </select>
+
+    <insert id="addUser" parameterType="UserEntity" >
+        INSERT INTO imyzone_user () VALUES ()
+    </insert>
+
+    <update id="updateUser" parameterType="UserEntity">
+        UPDATE
+    </update>
+
+    <delete id="deleteUser" parameterType="integer" >
+        DELETE FROM imyzone_user WHERE userid=#{userid}
+    </delete>
+
+-->
+
+
+</mapper>
